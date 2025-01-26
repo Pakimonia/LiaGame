@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://omrme3ytbtm2"]
+
+[ext_resource type="Texture2D" path="res://Assets/Text box/Text box.png" id="1_nmuik"]
+[ext_resource type="Texture2D" path="res://Assets/Text box/Bubble.png" id="2_mueg7"]
+
+[sub_resource type="Animation" id="Animation_jn55s"]
+resource_name = "Dialog Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1112, 86), Vector2(1112, 112)]
+}
+
+[sub_resource type="Animation" id="Animation_hyor6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1112, 86)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dkxrp"]
+_data = {
+"Dialog Idle": SubResource("Animation_jn55s"),
+"RESET": SubResource("Animation_hyor6")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialog box" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Dialog box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nmuik")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog box"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 5.0
+offset_right = 1072.0
+offset_bottom = 140.0
+theme_override_font_sizes/normal_font_size = 24
+text = "Hello Hello "
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1112, 86)
+scale = Vector2(3.33334, 3.33334)
+texture = ExtResource("2_mueg7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_dkxrp")
+}

@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://cn4jt74irmf8h"]
+
+[ext_resource type="Script" path="res://scrips/Area3D.gd" id="2_cox5c"]
+[ext_resource type="PackedScene" uid="uid://b7nva451irxdw" path="res://fermer.glb" id="2_m6iak"]
+[ext_resource type="PackedScene" uid="uid://80dmuj5ad28j" path="res://scene/copybuffer.glb" id="3_vsxfs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsl83"]
+albedo_color = Color(0.611765, 0.0352941, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_87slq"]
+material = SubResource("StandardMaterial3D_vsl83")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkhef"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v8osi"]
+
+[node name="nps" type="Node3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_87slq")
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("2_cox5c")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("BoxShape3D_mkhef")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CapsuleShape3D_v8osi")
+
+[node name="fermer" parent="." instance=ExtResource("2_m6iak")]
+transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 0, -0.943494, 2.36647)
+
+[node name="Empty" parent="." instance=ExtResource("3_vsxfs")]
+transform = Transform3D(0.101079, 0, 0.124028, 0, 0.16, 0, -0.124028, 0, 0.101079, 0.967279, -0.359269, -0.260461)
+
+[node name="Empty2" parent="." instance=ExtResource("3_vsxfs")]
+transform = Transform3D(0.124028, 0, -0.101079, 0, 0.16, 0, 0.101079, 0, 0.124028, -0.819216, -0.359269, -0.230206)
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

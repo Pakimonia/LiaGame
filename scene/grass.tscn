@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bliyg5v1ye550"]
+
+[ext_resource type="Texture2D" uid="uid://dd3ctasm34wpj" path="res://Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="1_p21cf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72iri"]
+transparency = 1
+albedo_texture = ExtResource("1_p21cf")
+
+[sub_resource type="BoxMesh" id="BoxMesh_7l31q"]
+material = SubResource("StandardMaterial3D_72iri")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_slwua"]
+
+[node name="grass" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_7l31q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_slwua")

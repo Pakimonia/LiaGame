@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhe5s215lx2f4"]
+
+[ext_resource type="PackedScene" uid="uid://bdaf3cagk7dv1" path="res://wall.tscn" id="1_yixb6"]
+[ext_resource type="PackedScene" uid="uid://dpsjn1iqo8t3w" path="res://scene/player.tscn" id="2_kwavs"]
+[ext_resource type="PackedScene" uid="uid://c081i3fclfb8m" path="res://wall_2.tscn" id="3_wgwgj"]
+
+[node name="location_2" type="Node3D"]
+
+[node name="wall" parent="." instance=ExtResource("1_yixb6")]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="player" parent="." instance=ExtResource("2_kwavs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.73913, 1.17235, 34.4703)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.40486, 11.4184, 28.1393)
+light_energy = 2.18
+light_indirect_energy = 1.735
+light_volumetric_fog_energy = 1.855
+
+[node name="wall2" parent="." instance=ExtResource("3_wgwgj")]
+transform = Transform3D(1, 0, 0, 0, 5.455, 0, 0, 0, 19.7682, 9.49255, 2.65612, 30.4173)
+
+[node name="wall3" parent="." instance=ExtResource("3_wgwgj")]
+transform = Transform3D(1, 0, 0, 0, 5.455, 0, 0, 0, 19.7682, 3.92177, 2.65612, 30.4173)

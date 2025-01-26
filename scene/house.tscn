@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://30syscdmqotg"]
+
+[ext_resource type="PackedScene" uid="uid://bsbg7d3q666n1" path="res://models/untitled.glb" id="1_1dj0o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0u8kk"]
+size = Vector3(1.17532, 3.02881, 1.479)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fqdk3"]
+size = Vector3(17.106, 12.9153, 6.717)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fmgfx"]
+size = Vector3(4.04174, 1, 5.28223)
+
+[node name="house" type="StaticBody3D"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(4.005, 0, 0, 0, 4.005, 0, 0, 0, 4.005, 4.68716, 6.03834, 6.35199)
+shape = SubResource("BoxShape3D_0u8kk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49097, 6.48479, 0.0314331)
+shape = SubResource("BoxShape3D_fqdk3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.759271, 0.650774, 0, -0.650774, -0.759271, 0, 0, 0, 1, 1.44045, 0.624078, 6.02182)
+shape = SubResource("BoxShape3D_fmgfx")
+
+[node name="untitled" parent="." instance=ExtResource("1_1dj0o")]

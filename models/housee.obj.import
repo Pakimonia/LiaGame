@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dej8olljo6iom"
+path="res://.godot/imported/housee.obj-b995c54c211b798c1bd42e6539d45506.mesh"
+
+[deps]
+
+files=["res://.godot/imported/housee.obj-b995c54c211b798c1bd42e6539d45506.mesh"]
+
+source_file="res://models/housee.obj"
+dest_files=["res://.godot/imported/housee.obj-b995c54c211b798c1bd42e6539d45506.mesh", "res://.godot/imported/housee.obj-b995c54c211b798c1bd42e6539d45506.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

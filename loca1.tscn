@@ -1,0 +1,34 @@
+[gd_scene load_steps=11 format=3 uid="uid://caicnny1eaf26"]
+
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_3kr4s"]
+[ext_resource type="Resource" path="res://tr/data.hterrain" id="2_fuhc8"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_hv33k"]
+[ext_resource type="Texture2D" uid="uid://cy1b6jskt02rc" path="res://GroundWoodChips001/GroundWoodChips001_COL_2K.jpg" id="4_ogebw"]
+[ext_resource type="Texture2D" uid="uid://cxuy3ufjb3njd" path="res://GroundDirtRocky020/GroundDirtRocky020_COL_2K.jpg" id="4_qh42n"]
+[ext_resource type="Texture2D" uid="uid://3fsab8kvm2ir" path="res://Poliigon_GrassPatchyGround_4585/2K/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="5_8x85u"]
+[ext_resource type="Texture2D" uid="uid://p83bl6nuoe11" path="res://GroundWoodChips001/GroundWoodChips001_NRM_2K.jpg" id="6_yawgq"]
+[ext_resource type="Texture2D" uid="uid://ucssxcpa26rk" path="res://Poliigon_GrassPatchyGround_4585/2K/Poliigon_GrassPatchyGround_4585_Normal.png" id="7_6a2qe"]
+[ext_resource type="Texture2D" uid="uid://bkmwdieu6357" path="res://GroundDirtRocky020/GroundDirtRocky020_NRM_2K.jpg" id="7_ea1eq"]
+
+[sub_resource type="Resource" id="Resource_rj2ck"]
+script = ExtResource("3_hv33k")
+mode = 0
+textures = [[ExtResource("4_qh42n"), ExtResource("5_8x85u"), ExtResource("4_ogebw")], [ExtResource("7_ea1eq"), ExtResource("7_6a2qe"), ExtResource("6_yawgq")]]
+
+[node name="HTerrain" type="Node3D"]
+script = ExtResource("1_3kr4s")
+_terrain_data = ExtResource("2_fuhc8")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_rj2ck")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
