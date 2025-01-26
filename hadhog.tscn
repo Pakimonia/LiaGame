@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd3vdsanv7ctd"]
+
+[ext_resource type="PackedScene" uid="uid://c8k1ndt5uaex" path="res://hadhog.glb" id="1_ewy34"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nwb6e"]
+radius = 108.592
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8nro3"]
+size = Vector3(65.4302, 63.3101, 121.631)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="hadhog" parent="." instance=ExtResource("1_ewy34")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="hadhog"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hadhog/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.701923, 37.1796, 0)
+shape = SubResource("SphereShape3D_nwb6e")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="hadhog"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hadhog/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49484, 28.1682, -0.118318)
+shape = SubResource("BoxShape3D_8nro3")

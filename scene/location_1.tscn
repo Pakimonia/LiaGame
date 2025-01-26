@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://deu374giud1y4"]
+[gd_scene load_steps=31 format=3 uid="uid://deu374giud1y4"]
 
 [ext_resource type="Texture2D" uid="uid://cmclfdhh75k2c" path="res://texture-7515225.jpg" id="1_lxbq0"]
 [ext_resource type="PackedScene" uid="uid://30syscdmqotg" path="res://scene/house.tscn" id="2_l81v7"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-02-4-staticbody.tscn" id="22_u36xf"]
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-04-staticbody.tscn" id="23_4qm0g"]
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-05-staticbody.tscn" id="24_gsl6v"]
+[ext_resource type="PackedScene" uid="uid://bd3vdsanv7ctd" path="res://hadhog.tscn" id="25_4lcf6"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mghem"]
 panorama = ExtResource("1_lxbq0")
@@ -100,7 +101,7 @@ mesh = SubResource("BoxMesh_ubfjw")
 shape = SubResource("BoxShape3D_ksxct")
 
 [node name="player" parent="." instance=ExtResource("4_vn3my")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 204.343, 1.27825, 335.023)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 224.819, 1.27825, 324.123)
 
 [node name="nps" parent="." instance=ExtResource("4_oqp8j")]
 transform = Transform3D(0.75, 0, 1.29904, 0, 1.5, 0, -1.29904, 0, 0.75, 236.04, 1.41447, 325.775)
@@ -571,5 +572,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 149.003, -5.96046e-08, 318.78
 
 [node name="Bush-05-StaticBody27" parent="." instance=ExtResource("24_gsl6v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168.561, -1.19209e-07, 330.323)
+
+[node name="Node3D" parent="." instance=ExtResource("25_4lcf6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 315.683, 0, 309.325)
 
 [connection signal="body_entered" from="perehod" to="perehod" method="_on_body_entered"]

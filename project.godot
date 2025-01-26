@@ -29,6 +29,7 @@ directories/dch_directory={
 "vbr": "res://vbr.dch"
 }
 directories/dtl_directory={
+"hag": "res://hag.dtl",
 "test": "res://test.dtl",
 "timeline": "res://timeline.dtl"
 }
@@ -53,8 +54,8 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 variables={}
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://New_File.tres"]
+layout/default_style="res://New_File.tres"
 glossary/default_case_sensitive=true
 
 [display]
