@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/tree-02-4-staticbody.tscn" id="22_u36xf"]
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-04-staticbody.tscn" id="23_4qm0g"]
 [ext_resource type="PackedScene" path="res://addons/shapespark-low-poly-exterior-plants/bodies/bush-05-staticbody.tscn" id="24_gsl6v"]
-[ext_resource type="PackedScene" uid="uid://bd3vdsanv7ctd" path="res://hadhog.tscn" id="25_4lcf6"]
+[ext_resource type="PackedScene" path="res://hadhog.tscn" id="25_4lcf6"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_mghem"]
 panorama = ExtResource("1_lxbq0")
